@@ -14,7 +14,35 @@
     <title>Our Games</title>
 </head>
 <body>
-    <div class="container">
+  <header>
+    <div class="sidebar-button">
+      <button id="open"><i class="fa-solid fa-bars" style="color: #7B0D1E;"></i></button>
+    </div>
+    <section class="sidebar">
+      <div class="sidebar-button">
+        <button id="close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <h1>Explore my site</h1>
+      <aside class="sidebar-itens">
+        <ul>
+          <a href="#">
+            <li><i class="fa-solid fa-user"></i> Profile</li>
+          </a>
+          <a href="#">
+            <li><i class="fa-solid fa-comment"></i> Chat</li>
+          </a>
+          <a href="#">
+            <li><i class="fa-solid fa-bookmark"></i> Saves</li>
+          </a>
+        </ul>
+        <ul>
+          <li onclick="SaidoSite()"><i class="fa-solid fa-door-open"></i> Exit</li>
+        </ul>
+      </aside>
+    </section>
+  </header>
+
+  <div class="container">
         <div class="box">
           <div class="main-card" id="maincd">
             <aside class="banner"></aside>
@@ -127,10 +155,10 @@
             <button id="pass-right"><i class="fa-solid fa-arrow-right" style="color: rgb(109, 0, 9);"></i></button>
           </div>
         </div>
-      </div>
+  </div>
       
-      <script src="https://kit.fontawesome.com/10ec0db383.js" crossorigin="anonymous"></script>
 
-    <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/10ec0db383.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
