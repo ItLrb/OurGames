@@ -10,295 +10,65 @@
     <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff"> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./login/login.css">
     <title>Our Games</title>
 </head>
 <body>
-  <header>
-    <div class="sidebar-button">
-      <button id="open"><i class="fa-solid fa-bars" style="color: #7B0D1E;"></i></button>
-    </div>
-    <section class="sidebar">
-      <div class="sidebar-button">
-        <button id="close"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <h1>Explore my site</h1>
-      <aside class="sidebar-itens">
-        <ul>
-          <a href="#">
-            <li><i class="fa-solid fa-heart"></i> Likes</li>
-          </a>
-          <a href="#">
-            <li><i class="fa-solid fa-bookmark"></i> Saves</li>
-          </a>
-          <a href="#">
-            <li><i class="fa-solid fa-comment"></i> Contact Me</li>
-          </a>
-        </ul>
-        <ul>
-          <li onclick="SaidoSite()"><i class="fa-solid fa-door-open"></i> Exit</li>
-        </ul>
-      </aside>
-    </section>
-  </header>
+    <header>
+        <section><h1>Our Games</h1></section>
+        <h2>Login to join the site!</h2>
+    </header>
+    <main>
+        <section class="persons">
+            <img src="./img/Authentication-rafiki.png" alt="Person svg" width="350px" height="350px">
+        </section>
+        <section class="container">
+            <aside>
+                <h1 id="login-signup">Login</h1>
+                <form action="login.php" method="post" autocomplete="off">
+                    <p><i class="fa-solid fa-person" style="color: #1c1c1c;"></i> Email: </p><br>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required 
+                    multiple><br>
 
-  <div class="container"> 
-        <div class="box carousel">
-          <div class="main-card" id="maincd">
-            <aside class="banner"></aside>
-            <section class="profileInfo">
-              <div class="profile lakeno"></div>
-              <span><a href="#">Nome</a><i class="fa-solid fa-pen" style="color: black;"></i></span>
-            </section>
-            <aside class="buttons">
-              <button id="like"><i class="fa-solid fa-heart" style="color: #cc0000;"></i></button>
-              <button id="add"><i class="fa-solid fa-user-plus" style="color: #7B0D1E;"></i></button>
-              <button id="fav"><i class="fa-solid fa-star" style="color: #FFCF00;"></i></button>
+                    
+                    <p><i class="fa-solid fa-unlock-keyhole" style="color: #1c1c1c;"></i> Password: </p><br>
+                    <input type="password" name="passw" id="password" placeholder="Your Password" required> <br>
+                    
+                    
+                    <p class="cfm-password"><i class="fa-solid fa-lock" style="color: #1c1c1c;"></i> Confirm password: </p><br>
+                    <input type="password" name="passw" id="confirm-password" class="cfm-password" 
+                    placeholder="Confirm Password" required> <br>
+
+                    <a href="/discover.html" id="login-sub-btn"><input type="submit" value="Login" onclick="doLogin()"></a>
+                    <a href="/discover.html" id="sign-sub-btn"><input type="submit" value="SignUp" onclick="doLogin()"></a>
+                </form>
+                <div class="login-sign-box">
+                    <p id="signup-p">
+                        Esta é uma sessão de Login, se quiser criar uma conta 
+                        <span onclick="abreCadastro()" id="signup-btn">clique aqui</span></p>
+                    <p id="login-p">
+                        Esta é uma sessão de SignUp, se quiser logar sua conta
+                        <span onclick="abreLogar()" id="login-btn">clique aqui</span>
+                    </p>
+                </div>
             </aside>
-            <div class="agaeri">
-              <hr size="1" width="75%" style="display: flex; justify-content: center;">
-            </div>
-            <section class="desc">
-              <p> Olá, este é o meu perfil, passe o mouse por cima e veja meus jogos preferidos. Também logo abaixo
-                você pode ver as minhas redes sociais.
-              </p>
-            </section>
-            <section class="social">
-              <ul>
-                <abbr title="Discord">
-                    <li id="discord">
-                      <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#8c9eff"
-                          d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
-                            </path>
-                          </svg>
-                        </a>
-                    </li>
-                </abbr>
-                <abbr title="Steam">
-                    <li id="steam">
-                      <a href="https://store.steampowered.com/?l=portuguese" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="35" fill="#40a6dd"></circle><path fill="#3070b7" d="M85,50c0,19.33-15.67,35-35,35c-15.86,0-29.25-10.55-33.55-25.01C15.51,56.82,15,53.47,15,50	c0-0.9,0.03-1.78,0.1-2.66C16.46,29.25,31.57,15,50,15C69.33,15,85,30.67,85,50z"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M72.076,28.949	c-0.522-0.548-1.065-1.078-1.629-1.588"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M74.411,31.712	c-0.247-0.331-0.502-0.657-0.763-0.977"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M24.348,66.5	c3.879,6.035,9.891,10.734,17.336,12.844c16.207,4.593,33.068-4.821,37.661-21.028c2.441-8.613,0.926-17.411-3.463-24.454"></path><path fill="#fefdef" d="M72.476,40.179c0.431,7.293-4.923,13.42-11.9,14.229c-0.349,0.04-0.684,0.161-0.967,0.369	L46.8,64.205c-0.356,0.262-0.599,0.641-0.735,1.062c-1.243,3.845-5.007,6.563-9.338,6.2c-4.299-0.36-7.834-3.896-8.194-8.194	c-0.363-4.332,2.355-8.095,6.2-9.338c0.421-0.136,0.8-0.378,1.062-0.735l9.427-12.808c0.208-0.283,0.329-0.618,0.369-0.967	c0.81-6.977,6.937-12.331,14.229-11.9C66.549,27.922,72.078,33.451,72.476,40.179z"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M72.476,40.179	c0.431,7.293-4.923,13.42-11.9,14.229c-0.349,0.04-0.684,0.161-0.967,0.369L46.8,64.205c-0.356,0.262-0.599,0.641-0.735,1.062	c-1.243,3.845-5.007,6.563-9.338,6.2c-4.299-0.36-7.834-3.896-8.194-8.194c-0.363-4.332,2.355-8.095,6.2-9.338	c0.421-0.136,0.8-0.378,1.062-0.735l9.427-12.808c0.208-0.283,0.329-0.618,0.369-0.967c0.81-6.977,6.937-12.331,14.229-11.9	C66.549,27.922,72.078,33.451,72.476,40.179z"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M67.912,25.304	c-2.823-2.047-6.046-3.643-9.596-4.649c-16.207-4.593-33.068,4.821-37.661,21.028c-0.36,1.27-0.634,2.544-0.825,3.816"></path><circle cx="59" cy="41" r="9.5" fill="#3070b7"></circle><circle cx="59" cy="41" r="9.5" fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></circle><circle cx="59" cy="41" r="6.5" fill="#fefdef"></circle><circle cx="59" cy="41" r="6.5" fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></circle><path fill="#fefdef" d="M42.16,64.53c-1.06,2.44-3.85,3.6-6.32,2.69l-19.39-7.23C15.51,56.82,15,53.47,15,50	c0-0.9,0.03-1.78,0.1-2.66l24.06,10.44l0.41,0.18C42.1,59.06,43.26,62,42.16,64.53z"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.1,47.34	l24.06,10.44l0.41,0.18c2.53,1.1,3.69,4.04,2.59,6.57c-1.06,2.44-3.85,3.6-6.32,2.69l-19.39-7.23"></path><circle cx="50" cy="50" r="35" fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></circle>
-                          </svg>
-                        </a>
-                    </li>
-                </abbr>
-                <abbr title="EpicGames">
-                    <li id="epic">
-                      <a href="https://store.epicgames.com/pt-BR/" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                        <path
-                          d="M 10 3 C 6.69 3 4 5.69 4 9 L 4 41.240234 L 25 47.539062 L 46 41.240234 L 46 9 C 46 5.69 43.31 3 40 3 L 10 3 z M 11 8 L 15 8 L 15 11 L 11 11 L 11 18 L 14 18 L 14 21 L 11 21 L 11 28 L 15 28 L 15 31 L 11 31 C 9.34 31 8 29.66 8 28 L 8 11 C 8 9.34 9.34 8 11 8 z M 17 8 L 23 8 C 24.66 8 26 9.34 26 11 L 26 18 C 26 19.66 24.66 21 23 21 L 20 21 L 20 31 L 17 31 L 17 8 z M 28 8 L 31 8 L 31 31 L 28 31 L 28 8 z M 36 8 L 39 8 C 40.66 8 42 9.34 42 11 L 42 15 L 39 15 L 39 11 L 36 11 L 36 28 L 39 28 L 39 24 L 42 24 L 42 28 C 42 29.66 40.66 31 39 31 L 36 31 C 34.34 31 33 29.66 33 28 L 33 11 C 33 9.34 34.34 8 36 8 z M 20 11 L 20 18 L 23 18 L 23 11 L 20 11 z M 9 34 L 13 34 C 13.55 34 14 34.45 14 35 L 14 36 L 13 36 L 13 35.25 C 13 35.11 12.89 35 12.75 35 L 9.25 35 C 9.11 35 9 35.11 9 35.25 L 9 38.75 C 9 38.89 9.11 39 9.25 39 L 12.75 39 C 12.89 39 13 38.89 13 38.75 L 13 38 L 12 38 L 12 37 L 14 37 L 14 39 C 14 39.55 13.55 40 13 40 L 9 40 C 8.45 40 8 39.55 8 39 L 8 35 C 8 34.45 8.45 34 9 34 z M 18 34 L 19 34 L 22 40 L 21 40 L 20.5 39 L 16.5 39 L 16 40 L 15 40 L 18 34 z M 23 34 L 24 34 L 26 38 L 28 34 L 29 34 L 29 40 L 28 40 L 28 36 L 26.5 39 L 25.5 39 L 24 36 L 24 40 L 23 40 L 23 34 z M 30 34 L 35 34 L 35 35 L 31 35 L 31 36.5 L 33 36.5 L 33 37.5 L 31 37.5 L 31 39 L 35 39 L 35 40 L 30 40 L 30 34 z M 37 34 L 41 34 C 41.55 34 42 34.45 42 35 L 42 35.5 L 41 35.5 L 41 35.25 C 41 35.11 40.89 35 40.75 35 L 37.25 35 C 37.11 35 37 35.11 37 35.25 L 37 36.25 C 37 36.39 37.11 36.5 37.25 36.5 L 41 36.5 C 41.55 36.5 42 36.95 42 37.5 L 42 39 C 42 39.55 41.55 40 41 40 L 37 40 C 36.45 40 36 39.55 36 39 L 36 38.5 L 37 38.5 L 37 38.75 C 37 38.89 37.11 39 37.25 39 L 40.75 39 C 40.89 39 41 38.89 41 38.75 L 41 37.75 C 41 37.61 40.89 37.5 40.75 37.5 L 37 37.5 C 36.45 37.5 36 37.05 36 36.5 L 36 35 C 36 34.45 36.45 34 37 34 z M 18.5 35 L 17 38 L 20 38 L 18.5 35 z">
-                        </path>
-                        </svg>
-                      </a>
-                    </li>
-                </abbr>
-                <abbr title="Riot Games">
-                    <li id="riot">
-                      <a href="https://www.riotgames.com/pt-br" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                        <circle cx="24" cy="24" r="20" fill="#d32f2f"></circle>
-                        <polygon fill="#fff"
-                          points="25.891,13.176 12.584,19.462 14.642,28.935 17.356,28.935 16.887,22.159 17.304,22.03 18.936,28.935 21.756,28.935 21.652,20.681 22.068,20.552 23.495,28.935 26.481,28.935 27.185,18.965 27.601,18.835 28.34,28.935 32.288,28.935 33.678,15.07">
-                        </polygon>
-                        <polygon fill="#fff" points="23.612,32.813 22.628,30.278 32.118,30.766 31.711,34.824"></polygon>
-                        </svg>
-                      </a>
-                    </li>
-                </abbr>
-              </ul>
-            </section>
-            <section>
-                <details>
-                    <summary>More infos</summary>
-                    <div class="alt-infos">
-                      <ul>
-                        <li><a href="#"><i class="fa-solid fa-trophy" style="color: #ffc800;"></i> Achievements</a></li>
-                        <li><a href="#"><i class="fa-solid fa-camera" style="color: #01022c;"></i> Prints</a></li>
-                      </ul>
-                    </div>
-                </details>
-            </section>
-          </div>
-          <div class="box-card  cardbox1">
-            <div class="cards" id="card1"></div>
-            <div class="cards" id="card2"></div>
-            <div class="cards" id="card3"></div>
-            <div class="cards" id="card4"></div>
-          </div>
+        </section>
+    </main>
 
 
-          <div class="main-card" id="maincd">
-            <aside class="banner brbanner">
-              <img src="https://cdn.discordapp.com/attachments/1094667212712841306/1157758847138680944/brasi.png?ex=6519c673&is=651874f3&hm=b52d482dfbf387e4b1f4aa32279b03b239adc2764b6cd7e6dc61728320d94be0&" alt="">
-            </aside>
-            <section class="profileInfo">
-              <div class="profile brazil">
-                <img src="https://cdn.discordapp.com/avatars/862423940080336987/c12075e43c3b0db05feb54bae7a60816.png?size=2048" alt="">
-              </div>
-              <span>Brazilispower</span>
-            </section>
-            <aside class="buttons">
-              <button id="like"><i class="fa-solid fa-heart" style="color: #cc0000;"></i></button>
-              <button id="add"><i class="fa-solid fa-user-plus" style="color: #7B0D1E;"></i></button>
-              <button id="fav"><i class="fa-solid fa-star" style="color: #FFCF00;"></i></button>
-            </aside>
-            <div class="agaeri">
-              <hr size="1" width="75%" style="display: flex; justify-content: center;">
-            </div>
-            <section class="desc">
-              <p> Eu não sei oque falar. <br>
-                <br>
-                <br>
-                <br>
-                <br>
-              </p>
-            </section>
-            <section class="social">
-              <ul>
-                <abbr title="Discord">
-                    <li id="discord">
-                      <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#8c9eff"
-                          d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
-                            </path>
-                          </svg>
-                        </a>
-                    </li>
-                </abbr>
-                <abbr title="Steam">
-                    <li id="steam">
-                      <a href="https://store.steampowered.com/?l=portuguese" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="35" fill="#40a6dd"></circle><path fill="#3070b7" d="M85,50c0,19.33-15.67,35-35,35c-15.86,0-29.25-10.55-33.55-25.01C15.51,56.82,15,53.47,15,50	c0-0.9,0.03-1.78,0.1-2.66C16.46,29.25,31.57,15,50,15C69.33,15,85,30.67,85,50z"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M72.076,28.949	c-0.522-0.548-1.065-1.078-1.629-1.588"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M74.411,31.712	c-0.247-0.331-0.502-0.657-0.763-0.977"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M24.348,66.5	c3.879,6.035,9.891,10.734,17.336,12.844c16.207,4.593,33.068-4.821,37.661-21.028c2.441-8.613,0.926-17.411-3.463-24.454"></path><path fill="#fefdef" d="M72.476,40.179c0.431,7.293-4.923,13.42-11.9,14.229c-0.349,0.04-0.684,0.161-0.967,0.369	L46.8,64.205c-0.356,0.262-0.599,0.641-0.735,1.062c-1.243,3.845-5.007,6.563-9.338,6.2c-4.299-0.36-7.834-3.896-8.194-8.194	c-0.363-4.332,2.355-8.095,6.2-9.338c0.421-0.136,0.8-0.378,1.062-0.735l9.427-12.808c0.208-0.283,0.329-0.618,0.369-0.967	c0.81-6.977,6.937-12.331,14.229-11.9C66.549,27.922,72.078,33.451,72.476,40.179z"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M72.476,40.179	c0.431,7.293-4.923,13.42-11.9,14.229c-0.349,0.04-0.684,0.161-0.967,0.369L46.8,64.205c-0.356,0.262-0.599,0.641-0.735,1.062	c-1.243,3.845-5.007,6.563-9.338,6.2c-4.299-0.36-7.834-3.896-8.194-8.194c-0.363-4.332,2.355-8.095,6.2-9.338	c0.421-0.136,0.8-0.378,1.062-0.735l9.427-12.808c0.208-0.283,0.329-0.618,0.369-0.967c0.81-6.977,6.937-12.331,14.229-11.9	C66.549,27.922,72.078,33.451,72.476,40.179z"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M67.912,25.304	c-2.823-2.047-6.046-3.643-9.596-4.649c-16.207-4.593-33.068,4.821-37.661,21.028c-0.36,1.27-0.634,2.544-0.825,3.816"></path><circle cx="59" cy="41" r="9.5" fill="#3070b7"></circle><circle cx="59" cy="41" r="9.5" fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></circle><circle cx="59" cy="41" r="6.5" fill="#fefdef"></circle><circle cx="59" cy="41" r="6.5" fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></circle><path fill="#fefdef" d="M42.16,64.53c-1.06,2.44-3.85,3.6-6.32,2.69l-19.39-7.23C15.51,56.82,15,53.47,15,50	c0-0.9,0.03-1.78,0.1-2.66l24.06,10.44l0.41,0.18C42.1,59.06,43.26,62,42.16,64.53z"></path><path fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15.1,47.34	l24.06,10.44l0.41,0.18c2.53,1.1,3.69,4.04,2.59,6.57c-1.06,2.44-3.85,3.6-6.32,2.69l-19.39-7.23"></path><circle cx="50" cy="50" r="35" fill="none" stroke="#1f212b" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></circle>
-                          </svg> 
-                        </a>
-                    </li>
-                </abbr>
-                <abbr title="EpicGames">
-                    <li id="epic">
-                      
-                    </li>
-                </abbr>
-                <abbr title="Riot Games">
-                    <li id="riot">
-                      
-                    </li>
-                </abbr>
-              </ul>
-            </section>
-            <section>
-                <details>
-                    <summary>More infos</summary>
-                    <div class="alt-infos">
-                      <ul>
-                        <li><a href="#"><i class="fa-solid fa-trophy" style="color: #ffc800;"></i> Achievements</a></li>
-                        <li><a href="#"><i class="fa-solid fa-camera" style="color: #01022c;"></i> Prints</a></li>
-                      </ul>
-                    </div>
-                </details>
-            </section>
-          </div>
-          <div class="box-card cardbox3">
-            <div class="cards" id="card1brz"></div>
-            <div class="cards" id="card2brz"></div>
-            <div class="cards" id="card3brz"></div>
-            <div class="cards" id="card4brz"></div>
-          </div>
-          
-          
-          <div class="main-card" id="maincd">
-            <aside class="banner ggbanner">
-              <img src="https://d2kf8ptlxcina8.cloudfront.net/AJ92CTCUJG-preview.png" alt="">
-            </aside>
-            <section class="profileInfo">
-              <div class="profile gangs">
-                <img src="https://cdn.discordapp.com/avatars/695119041676705812/1381ba5291a76ce13ed572033c136325.png?size=2048" alt="">
-              </div>
-              <span>Gangs</span>
-            </section>
-            <aside class="buttons">
-              <button id="like"><i class="fa-solid fa-heart" style="color: #cc0000;"></i></button>
-              <button id="add"><i class="fa-solid fa-user-plus" style="color: #7B0D1E;"></i></button>
-              <button id="fav"><i class="fa-solid fa-star" style="color: #FFCF00;"></i></button>
-            </aside>
-            <div class="agaeri">
-              <hr size="1" width="75%" style="display: flex; justify-content: center;">
-            </div>
-            <section class="desc">
-              <p>Eu sou o mior, vejam meu mod: <a href="https://www.curseforge.com/minecraft/mc-mods/omnipotent"
-                target="_blank">https://encurtador.com.br/wBES1</a> 
-                E não me pessam ajuda em trabalho de faculdade, a não ser que seja mulher.
-              </p>
-            </section>
-            <section class="social">
-              <ul>
-                <abbr title="Discord">
-                    <li id="discord">
-                      <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
-                            <path fill="#8c9eff"
-                          d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
-                            </path>
-                          </svg>
-                        </a>
-                    </li>
-                </abbr>
-                <abbr title="Steam">
-                    <li id="steam">
-                      
-                    </li>
-                </abbr>
-                <abbr title="EpicGames">
-                    <li id="epic">
-                      <a href="https://store.epicgames.com/pt-BR/" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                        <path
-                          d="M 10 3 C 6.69 3 4 5.69 4 9 L 4 41.240234 L 25 47.539062 L 46 41.240234 L 46 9 C 46 5.69 43.31 3 40 3 L 10 3 z M 11 8 L 15 8 L 15 11 L 11 11 L 11 18 L 14 18 L 14 21 L 11 21 L 11 28 L 15 28 L 15 31 L 11 31 C 9.34 31 8 29.66 8 28 L 8 11 C 8 9.34 9.34 8 11 8 z M 17 8 L 23 8 C 24.66 8 26 9.34 26 11 L 26 18 C 26 19.66 24.66 21 23 21 L 20 21 L 20 31 L 17 31 L 17 8 z M 28 8 L 31 8 L 31 31 L 28 31 L 28 8 z M 36 8 L 39 8 C 40.66 8 42 9.34 42 11 L 42 15 L 39 15 L 39 11 L 36 11 L 36 28 L 39 28 L 39 24 L 42 24 L 42 28 C 42 29.66 40.66 31 39 31 L 36 31 C 34.34 31 33 29.66 33 28 L 33 11 C 33 9.34 34.34 8 36 8 z M 20 11 L 20 18 L 23 18 L 23 11 L 20 11 z M 9 34 L 13 34 C 13.55 34 14 34.45 14 35 L 14 36 L 13 36 L 13 35.25 C 13 35.11 12.89 35 12.75 35 L 9.25 35 C 9.11 35 9 35.11 9 35.25 L 9 38.75 C 9 38.89 9.11 39 9.25 39 L 12.75 39 C 12.89 39 13 38.89 13 38.75 L 13 38 L 12 38 L 12 37 L 14 37 L 14 39 C 14 39.55 13.55 40 13 40 L 9 40 C 8.45 40 8 39.55 8 39 L 8 35 C 8 34.45 8.45 34 9 34 z M 18 34 L 19 34 L 22 40 L 21 40 L 20.5 39 L 16.5 39 L 16 40 L 15 40 L 18 34 z M 23 34 L 24 34 L 26 38 L 28 34 L 29 34 L 29 40 L 28 40 L 28 36 L 26.5 39 L 25.5 39 L 24 36 L 24 40 L 23 40 L 23 34 z M 30 34 L 35 34 L 35 35 L 31 35 L 31 36.5 L 33 36.5 L 33 37.5 L 31 37.5 L 31 39 L 35 39 L 35 40 L 30 40 L 30 34 z M 37 34 L 41 34 C 41.55 34 42 34.45 42 35 L 42 35.5 L 41 35.5 L 41 35.25 C 41 35.11 40.89 35 40.75 35 L 37.25 35 C 37.11 35 37 35.11 37 35.25 L 37 36.25 C 37 36.39 37.11 36.5 37.25 36.5 L 41 36.5 C 41.55 36.5 42 36.95 42 37.5 L 42 39 C 42 39.55 41.55 40 41 40 L 37 40 C 36.45 40 36 39.55 36 39 L 36 38.5 L 37 38.5 L 37 38.75 C 37 38.89 37.11 39 37.25 39 L 40.75 39 C 40.89 39 41 38.89 41 38.75 L 41 37.75 C 41 37.61 40.89 37.5 40.75 37.5 L 37 37.5 C 36.45 37.5 36 37.05 36 36.5 L 36 35 C 36 34.45 36.45 34 37 34 z M 18.5 35 L 17 38 L 20 38 L 18.5 35 z">
-                        </path>
-                        </svg>
-                      </a>
-                    </li>
-                </abbr>
-                <abbr title="Riot Games">
-                    <li id="riot">
-                      
-                    </li>
-                </abbr>
-              </ul>
-            </section>
-            <section>
-                <details>
-                    <summary>More infos</summary>
-                    <div class="alt-infos">
-                      <ul>
-                        <li><a href="#"><i class="fa-solid fa-trophy" style="color: #ffc800;"></i> Achievements</a></li>
-                        <li><a href="#"><i class="fa-solid fa-camera" style="color: #01022c;"></i> Prints</a></li>
-                      </ul>
-                    </div>
-                </details>
-            </section>
-          </div>
-          <div class="box-card cardbox2">
-            <div class="cards" id="card1gangs"></div>
-            <div class="cards" id="card2gangs"></div>
-            <div class="cards" id="card3gangs"></div>
-            <div class="cards" id="card4gangs"></div>
-          </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><i class="fa-brands fa-linkedin" style="color: #005eff;"></i></li>
+                <li><a href="https://www.linkedin.com/in/italo-roberto-a4921b278/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><i class="fa-brands fa-github" style="color: #000000;"></i></li>
+                <li><a href="https://github.com/ItLrb" target="_blank" rel="noopener noreferrer">Github</a></li>
+            </ul>
+        </nav>
+    </footer>    
 
-          <div class="pass-btn">
-            <button id="pass-left"><i class="fa-solid fa-arrow-left" style="color: rgb(109, 0, 9);"></i></button>
-            <button id="pass-right"><i class="fa-solid fa-arrow-right" style="color: rgb(109, 0, 9);"></i></button>
-          </div>
-        </div>
-  </div>
-      
-
-  <script src="https://kit.fontawesome.com/10ec0db383.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+    
+    <script src="https://kit.fontawesome.com/10ec0db383.js" crossorigin="anonymous"></script>
+    <script src="./login/login.js"></script>
 </body>
 </html>
