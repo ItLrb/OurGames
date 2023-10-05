@@ -32,15 +32,18 @@ function abreLogar() {
 function doLogin() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById('confirm-password')
 
     // Verifique se os campos de usuário e senha estão preenchidos
-    if (email === "" || password === "") {
+    
+    if (email === "" || password === "" && confirmPassword.value == password) {
         alert("Por favor, preencha todos os campos.");
         return false; // Impede o envio do formulário
     }
 
-
     window.location.href = './discover.html'
 
     return false
+
+    
 }

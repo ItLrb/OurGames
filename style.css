@@ -94,6 +94,9 @@ aside.sidebar-itens ul {
     
 } aside.sidebar-itens ul:nth-child(2) li:nth-child(1) {
     padding-right: 130px;
+} #exit {
+    position: relative;
+    left: 3rem;
 }
 
 aside.sidebar-itens a {
