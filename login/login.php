@@ -1,12 +1,12 @@
 <?php
 // Simule uma verificação de credenciais (substitua por lógica real)
-$email_valido = "";
-$senha_valida = "";
+$email_valido = "seu_email@example.com";
+$senha_valida = "sua_senha";
 
-$usuario_digitado = $_POST['email'];
-$senha_digitada = $_POST['password'];
+$email_digitado = $_POST['email'];
+$senha_digitada = $_POST['passw'];
 
-if ($email_digitado === $email_valido && $senha_digitada === $senha_valida) {
+if ($email_digitado == $email_valido && $senha_digitada == $senha_valida) {
     // Credenciais válidas, redirecione para o site local
     header("Location: ./discover.html");
     exit;

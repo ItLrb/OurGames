@@ -9,64 +9,49 @@
     <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#ffffff"> 
     <link rel="stylesheet" href="./login/login.css">
     <title>Our Games</title>
 </head>
 <body>
-    <header>
-        <section><h1>Our Games</h1></section>
-        <h2>Login to join the site!</h2>
-    </header>
     <main>
-        <section class="persons">
-            <img src="./img/Authentication-rafiki.png" alt="Person svg" width="350px" height="350px">
-        </section>
-        <section class="container">
-            <aside>
-                <h1 id="login-signup">Login</h1>
-                <form action="login.php" method="post" autocomplete="off">
-                    <p><i class="fa-solid fa-person" style="color: #1c1c1c;"></i> Email: </p><br>
-                    <input type="email" name="email" id="email" placeholder="Your Email" required 
-                    multiple><br>
-
-                    
-                    <p><i class="fa-solid fa-unlock-keyhole" style="color: #1c1c1c;"></i> Password: </p><br>
-                    <input type="password" name="passw" id="password" placeholder="Your Password" required minlength="3"
-                    maxlength="100"> <br>
-                    
-                    
-                    <p class="cfm-password"><i class="fa-solid fa-lock" style="color: #1c1c1c;"></i> Confirm password: </p><br>
-                    <input type="password" name="passw" id="confirm-password" class="cfm-password" 
-                    placeholder="Confirm Password" required> <br>
-
-                    <a href="/discover.html" id="login-sub-btn"><input type="submit" value="Login" onclick="doLogin()"></a>
-                    <a href="/discover.html" id="sign-sub-btn"><input type="submit" value="SignUp" onclick="doLogin()"></a>
-                </form>
-                <div class="login-sign-box">
-                    <p id="signup-p">
-                        Esta é uma sessão de Login, se quiser criar uma conta 
-                        <span onclick="abreCadastro()" id="signup-btn">clique aqui</span></p>
-                    <p id="login-p">
-                        Esta é uma sessão de SignUp, se quiser logar sua conta
-                        <span onclick="abreLogar()" id="login-btn">clique aqui</span>
-                    </p>
-                </div>
-            </aside>
-        </section>
-    </main>
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form action="./login/login.php" method="post">
+            <h3 id="login-signup">Login Here</h3>
+    
+            <label for="iemail">Email</label>
+            <input type="email" placeholder="Email" id="iemail" pattern=".+@globex\.com" size="30" required>
+    
+            <label for="ipassword">Password</label>
+            <input type="password" placeholder="Password" id="ipassword" required>
+    
+            <label class="cfm-password">Confirm password: </label>
+            <input type="password" name="passw" id="confirm-password" class="cfm-password" 
+            placeholder="Confirm Password" required> <br>
 
 
-    <footer>
-        <nav>
-            <ul>
-                <li><i class="fa-brands fa-linkedin" style="color: #005eff;"></i></li>
-                <li><a href="https://www.linkedin.com/in/italo-roberto-a4921b278/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><i class="fa-brands fa-github" style="color: #000000;"></i></li>
-                <li><a href="https://github.com/ItLrb" target="_blank" rel="noopener noreferrer">Github</a></li>
-            </ul>
-        </nav>
-    </footer>    
+            <a href="./discover.html"><input type="submit" value="Login" id="login" onclick="doLogin()"></a>
+            <a href="./discover.html"><input type="submit" value="SignUp" id="signup" onclick="doLogin()"></a>
+            <div class="social">
+                <a href="https://github.com/ItLrb" target="_blank" style="color: black;"><div class="go"><i class="fab fa-github"></i>  Github</div></a>
+                <a href="https://www.linkedin.com/in/italo-roberto-a4921b278/" target="_blank" style="color: black;"><div class="fb"><i class="fab fa-linkedin"></i>  LinkedIn</div></a>
+            </div>
+            <div class="login-sign-box">
+                <p id="signup-p">
+                    Esta é uma sessão de Login, se quiser criar uma conta 
+                    <span onclick="abreCadastro()" id="signup-btn">clique aqui</span></p>
+                <p id="login-p">
+                    Esta é uma sessão de SignUp, se quiser logar sua conta
+                    <span onclick="abreLogar()" id="login-btn">clique aqui</span>
+                </p>
+            </div>
+    </main>  
 
     
     <script src="https://kit.fontawesome.com/10ec0db383.js" crossorigin="anonymous"></script>
