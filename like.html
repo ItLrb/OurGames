@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff"> 
+    <link rel="stylesheet" href="./like/like.css">
+    <link rel="stylesheet" href="./sidebar/sidebar.css">
+    <title>Our Games</title>
+</head>
+<body>
+    <header>
+        <div class="sidebar-button">
+          <button id="open"><i class="fa-solid fa-bars" style="color: #7B0D1E;"></i></button>
+        </div>
+        <section class="sidebar">
+          <div class="sidebar-button">
+            <button id="close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <a href="./discover.html">
+              <h1>Explore my site</h1>
+          </a>
+          <aside class="sidebar-itens">
+            <ul>
+              <a href="./like.html">
+                <li><i class="fa-solid fa-heart"></i> Likes</li>
+              </a>
+              <a href="#">
+                <li><i class="fa-solid fa-bookmark"></i> Following</li>
+              </a>
+              <a href="#">
+                <li><i class="fa-solid fa-comment"></i> My links</li>
+              </a>
+            </ul>
+            <ul>
+              <li onclick="SaidoSite()" id="exit"><i class="fa-solid fa-door-open"></i> Exit</li>
+            </ul>
+          </aside>
+        </section>
+    </header>
+    
+    <main>
+        <section class="container">
+            <h2>Seus curtidos</h2>
+            <a href="./discover.html"><button id="ifNotLike">Explore profiles</button></a>
+            <div class="listLike">
+                <ul id="likedProfilesList">
+                    <li id="pfpUser" class="pfpuser"></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/10ec0db383.js" crossorigin="anonymous"></script>
+    <script src="./like/like.js"></script>
+    <script src="./sidebar/sidebar.js"></script>
+</body>
+</html>

@@ -32,112 +32,6 @@ hr {
     margin: 10px 0px;
 }
 
-ul {
-    list-style: none;
-}
-
-header {
-    position: fixed;
-    z-index: 11;
-    width: 190px;
-} div.sidebar-button button i {
-    font-size: 25px;
-    padding: 5px;
-} div.sidebar-button button {
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-} div.sidebar-button {
-    z-index: 5;
-    position: absolute;
-    display: flex;
-    width: 190px; 
-}
-
-#close {
-    display: none;
-    color: white;
-} #close:focus, #close:hover {
-    color: #cc0000;
-}
-
-
-section.sidebar {
-    height: 100vh;
-    background-color: rgb(56, 56, 56);
-    width: 0px;
-    left: -190px;
-    position: absolute;
-    /* left: -190px; */
-    transition: all .5s;
-}
-section.sidebar > div.sidebar-button {
-    display: flex;
-    justify-content: flex-end;
-    width: 190px;
-}
-
-aside.sidebar-itens {
-    position: fixed;
-} 
-aside.sidebar-itens ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 70vh;
-}aside.sidebar-itens ul:nth-child(2) {
-    height: 25vh;
-    
-} aside.sidebar-itens ul:nth-child(2) li:nth-child(1) {
-    padding-right: 130px;
-} #exit {
-    position: relative;
-    left: 3rem;
-}
-
-aside.sidebar-itens a {
-    text-decoration: none;
-    border-top: none;
-}
-aside.sidebar-itens li {
-    color: white;
-    padding: 10px 0px;
-    z-index: 4;
-
-
-    cursor: pointer;
-
-} aside.sidebar-itens li:nth-child(2),
-aside.sidebar-itens li:nth-child(3),
-aside.sidebar-itens li:nth-child(4) {
-    border-top: none;
-    padding-right: 118px;
-    z-index: 1;
-} aside.sidebar-itens li:nth-child(4) {
-    padding-right: 135px;
-}
-aside.sidebar-itens li:hover {
-    color: #cc0000;
-    border-color: #cc0000;
-}
-
-
-
-section.sidebar h1 {
-    color: white;
-    margin-top: 75px;
-    border-bottom: 1px solid white;
-} section.sidebar h1::selection {
-    color: #cc0000;
-    border-color: #cc0000;
-}
-
-
-
 
 div.container {
     display: flex;
@@ -164,7 +58,9 @@ div.box-card {
     border-radius: 15px;
     position: absolute;
     transition: all .8s;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.377);
+    -webkit-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.377);
+    -moz-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.377);
+    box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.377);
 }
 
 div.cards {
@@ -194,7 +90,7 @@ div.profile {
     width: 75px;
     height: 75px;
     margin-top: 10px;
-    background-image: url('https://yt3.googleusercontent.com/RG3Nq5NUIllLxP2jn0WmsRq3_7JAh_7xBAZBmGFh7hRr8Tys375iTPTcSSIfknrobTlqpeAGlg=s176-c-k-c0x00ffffff-no-rj');
+    background-image: url('https://i.pinimg.com/564x/4e/12/6c/4e126c11e671154288dcc56ff6522331.jpg');
     background-position: center center;
     background-size: contain;
 }
@@ -338,7 +234,8 @@ aside.buttons {
     border-radius: 50%;
 }
 
-#like {
+#likeCriadorButton,
+#likeBrazilispowerButton {
     border: 1px solid #cc0000;
     border-radius: 50%;
 }

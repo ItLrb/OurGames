@@ -170,4 +170,32 @@ nextBtn.addEventListener("click", () => {
 // Mostrar o primeiro card inicialmente
 showCurrentCard();
 
+
+// BUTTON LIKE
+
+document.getElementById("likeCriadorButton").addEventListener("click", function() {
+  // Marque o "like" no Criador
+  // profileBanner("https://i.pinimg.com/564x/4e/12/6c/4e126c11e671154288dcc56ff6522331.jpg")
+  likeProfile("Criador");
+});
+
+document.getElementById("likeBrazilispowerButton").addEventListener("click", function() {
+  // Marque o "like" no Brazilispower
+  // profileBanner("https://cdn.discordapp.com/attachments/1094667212712841306/1157758847138680944/brasi.png?ex=6519c673&is=651874f3&hm=b52d482dfbf387e4b1f4aa32279b03b239adc2764b6cd7e6dc61728320d94be0&")
+  likeProfile("Brazilispower");
+});
+
+function likeProfile(profileName) {
+  // Recupere a lista de perfis "liked" da localStorage (se existir)
+  const likedProfiles = JSON.parse(localStorage.getItem("likedProfiles")) || [];
+
+  // Adicione o perfil atual à lista se ainda não estiver lá
+  if (!likedProfiles.includes(profileName)) {
+      likedProfiles.push(profileName);
+      localStorage.setItem("likedProfiles", JSON.stringify(likedProfiles));
+  }
+}
+
+
+
 // DESCRIPTION MAX CHARACTERS = 136

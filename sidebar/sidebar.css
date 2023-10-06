@@ -1,0 +1,103 @@
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    z-index: 11;
+    width: 190px;
+} div.sidebar-button button i {
+    font-size: 25px;
+    padding: 5px;
+} div.sidebar-button button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+} div.sidebar-button {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    width: 190px; 
+}
+
+#close {
+    display: none;
+    color: white;
+} #close:focus, #close:hover {
+    color: #cc0000;
+}
+
+
+section.sidebar {
+    height: 100vh;
+    background-color: rgb(56, 56, 56);
+    width: 0px;
+    left: -190px;
+    position: absolute;
+    /* left: -190px; */
+    transition: all .5s;
+}
+section.sidebar > div.sidebar-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 190px;
+}
+
+aside.sidebar-itens {
+    position: fixed;
+} 
+aside.sidebar-itens ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}aside.sidebar-itens ul:nth-child(2) {
+    height: 25vh;
+    
+} aside.sidebar-itens ul:nth-child(2) li:nth-child(1) {
+    padding-right: 130px;
+} #exit {
+    position: relative;
+    left: 3rem;
+}
+
+aside.sidebar-itens a {
+    text-decoration: none;
+    border-top: none;
+}
+aside.sidebar-itens li {
+    color: white;
+    padding: 10px 0px;
+    z-index: 4;
+
+
+    cursor: pointer;
+
+} aside.sidebar-itens li:nth-child(2),
+aside.sidebar-itens li:nth-child(3),
+aside.sidebar-itens li:nth-child(4) {
+    border-top: none;
+    padding-right: 118px;
+    z-index: 1;
+} aside.sidebar-itens li:nth-child(4) {
+    padding-right: 135px;
+}
+aside.sidebar-itens li:hover {
+    color: #cc0000;
+    border-color: #cc0000;
+}
+
+
+
+section.sidebar h1 {
+    color: white;
+    margin-top: 75px;
+    border-bottom: 1px solid white;
+} section.sidebar h1::selection {
+    color: #cc0000;
+    border-color: #cc0000;
+}

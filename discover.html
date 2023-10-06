@@ -11,6 +11,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff"> 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./sidebar/sidebar.css">
     <title>Our Games</title>
 </head>
 <body>
@@ -22,14 +23,16 @@
       <div class="sidebar-button">
         <button id="close"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <h1>Explore my site</h1>
+      <a href="./discover.html">
+        <h1>Explore my site</h1>
+      </a>
       <aside class="sidebar-itens">
         <ul>
-          <a href="#">
+          <a href="./like.html">
             <li><i class="fa-solid fa-heart"></i> Likes</li>
           </a>
           <a href="#">
-            <li><i class="fa-solid fa-bookmark"></i> Saves</li>
+            <li><i class="fa-solid fa-bookmark"></i> Following</li>
           </a>
           <a href="#">
             <li><i class="fa-solid fa-comment"></i> My links</li>
@@ -48,10 +51,10 @@
             <aside class="banner"></aside>
             <section class="profileInfo">
               <div class="profile lakeno"></div>
-              <span><a href="#">Eu</a><i class="fa-solid fa-pen" style="color: black;"></i></span>
+              <span>Criador</span>
             </section>
             <aside class="buttons">
-              <button id="like"><i class="fa-solid fa-heart" style="color: #cc0000;"></i></button>
+              <button id="likeCriadorButton" class="like-button"><i class="fa-solid fa-heart" style="color: #cc0000;"></i></button>
               <button id="add"><i class="fa-solid fa-user-plus" style="color: #7B0D1E;"></i></button>
               <button id="fav"><i class="fa-solid fa-star" style="color: #FFCF00;"></i></button>
             </aside>
@@ -142,7 +145,7 @@
               <span>Brazilispower</span>
             </section>
             <aside class="buttons">
-              <button id="like"><i class="fa-solid fa-heart" style="color: #cc0000;"></i></button>
+              <button id="likeBrazilispowerButton" class="like-button"><i class="fa-solid fa-heart" style="color: #cc0000;"></i></button>
               <button id="add"><i class="fa-solid fa-user-plus" style="color: #7B0D1E;"></i></button>
               <button id="fav"><i class="fa-solid fa-star" style="color: #FFCF00;"></i></button>
             </aside>
