@@ -29,7 +29,7 @@ function displayLikedProfiles() {
             removeButton.dataset.profileName = profileName; // Armazena o nome do perfil como um atributo personalizado
             removeButton.addEventListener("click", function(event) {
                 // Chame a função para remover o perfil da lista quando o botão for clicado
-                removeProfile(event.target.dataset.profileName);
+                removeProfile(event.target.dataset.profileName)
                 location.reload()
             }) 
             
