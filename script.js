@@ -44,24 +44,28 @@ bigBox.addEventListener("mouseenter", (hover) => {
 
 cardOne.addEventListener("mouseenter", (cd1Info) => {
   cardOne.style.scale = "1.1";
+
   cardOne.addEventListener("mouseleave", () => {
     cardOne.style.scale = "1";
   });
 });
 cardTwo.addEventListener("mouseenter", (cd2Info) => {
   cardTwo.style.scale = "1.1";
+
   cardTwo.addEventListener("mouseleave", () => {
     cardTwo.style.scale = "1";
   });
 });
 cardThree.addEventListener("mouseenter", (cd3Info) => {
   cardThree.style.scale = "1.1";
+
   cardThree.addEventListener("mouseleave", () => {
     cardThree.style.scale = "1";
   });
 });
 cardFour.addEventListener("mouseenter", (cd4Info) => {
   cardFour.style.scale = "1.1";
+
   cardFour.addEventListener("mouseleave", () => {
     cardFour.style.scale = "1";
   });
