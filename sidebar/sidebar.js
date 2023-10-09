@@ -21,5 +21,9 @@ openSidebar.addEventListener("click", () => {
 });
 
 function SaidoSite() {
-  window.confirm("Deseja sair do site?");
+  if (window.confirm("Deseja sair do site?")) {
+    const meuLink = "https://github.com/ItLrb"
+    
+    window.open(meuLink)
+  } else {}
 }

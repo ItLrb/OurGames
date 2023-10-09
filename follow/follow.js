@@ -1,17 +1,17 @@
-const noLikeButton = document.getElementById('ifNotLike')
+const noFollowsButton = document.getElementById('ifNotFollow')
 
-const likedProfiles = JSON.parse(localStorage.getItem("likedProfiles"));
-const likedProfilesList = document.getElementById("likedProfilesList");
+const followedProfiles = JSON.parse(localStorage.getItem("followedProfiles"));
+const followedProfilesList = document.getElementById("followedProfilesList");
 
-function displayLikedProfiles() {
-    likedProfilesList.innerHTML = "";
-    if (likedProfiles && likedProfiles.length > 0) {
+function displayFollowedProfiles() {
+    followedProfilesList.innerHTML = "";
+    if (followedProfiles && followedProfiles.length > 0) {
         // Se o usuário deu "like" em algum perfil, exiba os perfis em uma lista
-        for (var i = 0; i < likedProfiles.length; i++) {
-            let profileName = likedProfiles[i];
+        for (var i = 0; i < followedProfiles.length; i++) {
+            let profileName = followedProfiles[i];
             profileName.add
             const listItem = document.createElement("li");
-            noLikeButton.style.display = 'none'
+            noFollowsButton.style.display = 'none'
 
             const profileImage = document.createElement("img");
             profileImage.src = getProfileImage(profileName); // Obtém a URL da imagem do perfil
@@ -19,13 +19,13 @@ function displayLikedProfiles() {
             profileImage.classList.add("profile-image");
 
             
-            listItem.innerHTML = `Você curtiu o perfil de: ` +  
+            listItem.innerHTML = `Você seguiu o perfil de: ` +  
             `<a href="./discover.html" id="usernameLink" target="_blank">${profileName}</a>`
 
             // Adicione um botão de remoção ao lado de cada perfil
             const removeButton = document.createElement("button");
             removeButton.classList.add('remove-button')
-            removeButton.textContent = "Remove";
+            removeButton.textContent = "Unfollow";
             removeButton.dataset.profileName = profileName; // Armazena o nome do perfil como um atributo personalizado
             removeButton.addEventListener("click", function(event) {
                 // Chame a função para remover o perfil da lista quando o botão for clicado
@@ -36,14 +36,14 @@ function displayLikedProfiles() {
             
             listItem.appendChild(profileImage);
             listItem.appendChild(removeButton);
-            likedProfilesList.appendChild(listItem);
+            followedProfilesList.appendChild(listItem);
         }
-    } else if (likedProfiles && likedProfiles.length == 0) {
+    } else if (followedProfiles && followedProfiles.length == 0) {
         const titleMain = document.querySelector('h2')
-        titleMain.innerHTML = `Você ainda não tem nenhum curtidos.`
-        titleMain.classList.add("nolikes")
+        titleMain.innerHTML = `Você ainda não seguiu nenhum perfil.`
+        titleMain.classList.add("nofollows")
 
-        noLikeButton.style.display = 'flex'
+        noFollowsButton.style.display = 'flex'
     }
 }
 function getProfileImage(profileName) {
@@ -58,21 +58,21 @@ function getProfileImage(profileName) {
 }
 
 
-displayLikedProfiles(); // Exibe os perfis iniciais
+displayFollowedProfiles(); // Exibe os perfis iniciais
 
 function removeProfile(profileName) {
     // Recupere a lista de perfis "liked" da localStorage
-    const likedProfiles = JSON.parse(localStorage.getItem("likedProfiles"));
+    const followedProfiles = JSON.parse(localStorage.getItem("followedProfiles"));
 
     // Encontre o índice do perfil a ser removido
-    let index = likedProfiles.indexOf(profileName);
+    let index = followedProfiles.indexOf(profileName);
 
     if (index !== -1) {
         // Remova o perfil da lista
-        likedProfiles.splice(index, 1);
+        followedProfiles.splice(index, 1);
 
         // Atualize a localStorage com a nova lista
-        localStorage.setItem("likedProfiles", JSON.stringify(likedProfiles));
+        localStorage.setItem("followedProfiles", JSON.stringify(followedProfiles));
 
         var listItemToRemove = document.querySelector(`li:contains("${profileName}")`);
         if (listItemToRemove) {
