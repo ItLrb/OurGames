@@ -20,7 +20,7 @@ function displayLikedProfiles() {
 
             
             listItem.innerHTML = `Você curtiu o perfil de: ` +  
-            `<a href="./discover.html" id="usernameLink" target="_blank">${profileName}</a>`
+            `<a href="./discover.html" id="usernameLink">${profileName}</a>`
 
             // Adicione um botão de remoção ao lado de cada perfil
             const removeButton = document.createElement("button");

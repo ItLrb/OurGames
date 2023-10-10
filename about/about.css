@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --fade: linear-gradient(to right, #2989F3, #29E7A9);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {text-decoration: none;}
+
+.container a:nth-child(1) {
+    text-decoration: underline;
+    color: black;
+}
+
+.container a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    font-weight: bold;
+    background-image: var(--fade);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.349);
+}
+
+h2 {
+    font-size: 35px;
+}
+
+body {
+    overflow: hidden;
+    background-color: #c9c9c9;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+p {
+    font-size: 19px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #F8F8F8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    z-index: 10;
+    width: 700px;
+    min-height: 380px;
+    height: auto;
+    padding: 20px 10px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container h2,
+p {
+    text-align: center;
+    margin-left: 15px;
+}
+
+span.profile-channel {
+    background-image: url('https://yt3.googleusercontent.com/UlKrbeZ4Xz79DUbEbF3FvC0FQ4A_cvpIIzhJQ_wigP8CL_Xf_WF-ryYrrtGpqpD9WzAplsUz=s176-c-k-c0x00ffffff-no-rj');
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+}
+iframe {
+    border-radius: 20px;
+    position: relative;
+} div.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 290px) {
+    iframe {
+        width: 400px;
+        height: 250px;
+        margin-left: 5px;
+    }
+} @media screen and (max-width: 290px) and (min-width: 160px) {
+    iframe {
+        width: 300px;
+        height: 300px;
+    }
+}
