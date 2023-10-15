@@ -50,7 +50,7 @@ function getProfileImage(profileName) {
     // Mapeie os nomes dos perfis para as URLs das imagens de perfil correspondentes
     const profileImageUrls = {
         "Criador": "https://i.pinimg.com/564x/4e/12/6c/4e126c11e671154288dcc56ff6522331.jpg",
-        "Brazilispower": "https://cdn.discordapp.com/avatars/862423940080336987/c12075e43c3b0db05feb54bae7a60816.png?size=2048",
+        "Brazilispower": "https://cdn.discordapp.com/avatars/862423940080336987/d1d961ca888a8452baec5cc4b4d581ef.png?size=2048",
         // Adicione mais perfis e URLs de imagens, se necessário
     };
 

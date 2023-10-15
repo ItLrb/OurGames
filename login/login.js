@@ -19,7 +19,7 @@ function abreCadastro() {
     loginExplain.style.display = 'block'
 }
 function abreLogar() {
-    title.innerText = 'Login Here'
+    title.innerText = 'Login'
     cfmPassBox.style.display = 'none'
     cfmPassP.style.display = 'none'
     loginButton.style.display = 'block'
