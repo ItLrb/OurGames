@@ -315,7 +315,7 @@ div.pass-btn {
     align-items: flex-end;
     gap: 35px;
     border: none;
-    z-index: 9;
+    z-index: 20;
     height: 100vh;
 } div.pass-btn button {
     border-radius: 50%;
@@ -331,7 +331,7 @@ div.pass-btn {
 
 @media screen and (max-width: 1023px) and (min-width: 290px) {
     div.pass-btn button {
-        margin-bottom: 15px;
+        margin-bottom: 55px;
     }
 }
 
