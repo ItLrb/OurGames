@@ -315,7 +315,7 @@ div.pass-btn {
     align-items: flex-end;
     gap: 35px;
     border: none;
-    z-index: 20;
+    z-index: 9;
     height: 100vh;
 } div.pass-btn button {
     border-radius: 50%;
