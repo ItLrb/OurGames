@@ -50,7 +50,7 @@ function getProfileImage(profileName) {
     // Mapeie os nomes dos perfis para as URLs das imagens de perfil correspondentes
     const profileImageUrls = {
         "Criador": "https://i.pinimg.com/564x/4e/12/6c/4e126c11e671154288dcc56ff6522331.jpg",
-        "Brazilispower": "https://cdn.discordapp.com/avatars/862423940080336987/d1d961ca888a8452baec5cc4b4d581ef.png?size=2048",
+        "Brazilispower": "https://i0.wp.com/blog.bioparquedorio.com.br/wp-content/uploads/2020/11/Abu_filhote_macaco-prego-do-peito-amarelo-BioParquedoRio4.jpg?resize=1024%2C683&ssl=1",
         // Adicione mais perfis e URLs de imagens, se necessário
     };
 
