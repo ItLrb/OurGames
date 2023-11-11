@@ -102,7 +102,7 @@ div.main-card {
     width: 280px;
     min-height: 380px;
     height: auto;
-    padding: 20px 10px 20px 0px;
+    padding: 30px 10px 30px 0px;
 }
 
 .agaeri {
@@ -224,6 +224,8 @@ aside.buttons {
     width: 280px;
     gap: 7px;
 }
+
+
 
 #fav {
     border: 1px solid #FFCF00;
@@ -476,3 +478,181 @@ div.cards4gangs {
     background-position: center center;
     background-size: cover;
 } */
+
+@-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-100px);
+                transform: translateY(-100px);
+    }
+}
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-100px);
+                transform: translateY(-100px);
+    }
+}
+  
+
+@media screen and (max-width: 449px) and (min-width: 0px) {
+    div.cards1 {
+        transition: all 1s;
+
+        -moz-transform: translate(155px, -115px);
+        -webkit-transform: translate(155px, -115px);
+        -o-transform: translate(155px, -115px);
+        -ms-transform: translate(155px, -115px);
+        transform: translate(155px, -115px);
+
+        background-image: url('https://i.pinimg.com/564x/07/db/72/07db72be54bdbb701a080a0040133632.jpg');
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 10;
+    }
+
+    div.cards2 {
+        transition: all 1s;
+
+        
+
+        -moz-transform: translate(160px, 165px);
+        -webkit-transform: translate(160px, 165px);
+        -o-transform: translate(160px, 165px);
+        -ms-transform: translate(160px, 165px);
+        transform: translate(160px, 165px);
+
+        background-image: url('https://picfiles.alphacoders.com/433/thumb-433970.jpg');
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 10;
+    }
+
+    div.cards3 {
+        transition: all 1s;
+
+        -moz-transform: translate(-175px, 165px);
+        -webkit-transform: translate(-175px, 165px);
+        -o-transform: translate(-175px, 165px);
+        -ms-transform: translate(-175px, 165px);
+        transform: translate(-175px, 165px);
+
+        background-image: url('https://img.elo7.com.br/product/zoom/2586574/big-poster-gamer-detroit-become-human-lo03-tamanho-90x60-cm-presente-geek.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        z-index: 10;
+    }
+
+    div.cards4 {
+        transition: all 1s;
+
+        -moz-transform: translate(-175px, -115px);
+        -webkit-transform: translate(-175px, -115px);
+        -o-transform: translate(-175px, -115px);
+        -ms-transform: translate(-175px, -115px);
+        transform: translate(-175px, -115px);
+
+        background-image: url('https://upload.wikimedia.org/wikipedia/pt/3/3e/Hitman_3_capa.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        z-index: 10;
+    }
+
+    div.cards {
+        width: 200px;
+        height: 285px;
+        transition: all .8s;
+    }
+
+    .box-card {
+        border: 1px solid black;
+    }
+
+    aside.buttons {
+        z-index: 100;
+    }
+
+    div.cards1brzl {
+        transition: all 1s;
+
+        -moz-transform: translate(155px, -115px);
+        -webkit-transform: translate(155px, -115px);
+        -o-transform: translate(155px, -115px);
+        -ms-transform: translate(155px, -115px);
+        transform: translate(155px, -115px);
+
+        background-image: url('https://upload.wikimedia.org/wikipedia/pt/9/9c/Minecraft_capa.png');
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 10;
+    }
+
+    div.cards2brzl {
+        transition: all 1s;
+
+        
+
+        -moz-transform: translate(160px, 165px);
+        -webkit-transform: translate(160px, 165px);
+        -o-transform: translate(160px, 165px);
+        -ms-transform: translate(160px, 165px);
+        transform: translate(160px, 165px);
+
+        background-image: url('https://upload.wikimedia.org/wikipedia/pt/d/d3/Grand_Theft_Auto_San_Andreas_capa.png');
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 10;
+    }
+
+    div.cards3brzl {
+        transition: all 1s;
+
+        -moz-transform: translate(-175px, 165px);
+        -webkit-transform: translate(-175px, 165px);
+        -o-transform: translate(-175px, 165px);
+        -ms-transform: translate(-175px, 165px);
+        transform: translate(-175px, 165px);
+
+        background-image: url('https://i.pinimg.com/564x/49/8a/53/498a5371ef81debb18bc73da7dcb5403.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        z-index: 10;
+    }
+
+    div.cards4brzl {
+        transition: all 1s;
+
+        -moz-transform: translate(-175px, -115px);
+        -webkit-transform: translate(-175px, -115px);
+        -o-transform: translate(-175px, -115px);
+        -ms-transform: translate(-175px, -115px);
+        transform: translate(-175px, -115px);
+
+        background-image: url('https://upload.wikimedia.org/wikipedia/pt/2/25/Half-Life_2_cover.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        z-index: 10;
+    }
+
+    div.cards {
+        width: 200px;
+        height: 285px;
+        transition: all .8s;
+    }
+}

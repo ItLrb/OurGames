@@ -226,3 +226,4 @@ function followProfile(profileName) {
 }
 
 // DESCRIPTION MAX CHARACTERS = 136
+
